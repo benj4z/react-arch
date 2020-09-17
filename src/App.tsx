@@ -1,11 +1,10 @@
 import React from 'react';
-import {renderRoutes} from 'react-router-config';
-import { routes } from "./router";
+import { RouterConfig } from "./router";
 
 function App() {
   return (
     <div className="App">
-        {renderRoutes(routes)}
+       <RouterConfig />
     </div>
   );
 }
