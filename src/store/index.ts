@@ -1,13 +1,15 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import { rootReducer }  from './rootReducer';
+import { configureStore, Action } from '@reduxjs/toolkit';
+import { ThunkAction } from 'redux-thunk';
+import { rootReducer, RootState } from './rootReducer';
 import logger from 'redux-logger';
 
 export const store = configureStore({
     reducer: rootReducer,
-    middleware: getDefaultMiddleware =>
-    getDefaultMiddleware()
-        .prepend()
-        .concat(logger)
+    middleware: [logger] as const
 });
 
-export default store
+export type AppDispatch = typeof store.dispatch;
+
+export type AppThunk = ThunkAction<void, RootState, unknown, Action<string>>
+
+export default store;

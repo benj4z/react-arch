@@ -1,16 +1,14 @@
 import * as React from 'react';
-import AuthPage from "./Pages/AuthPage";
-import ForgotPass from "./Pages/ForgotPass";
+import AuthPage from "./pages/AuthPage";
+import ForgotPass from "./pages/ForgotPass";
 
-export const router = [
-    {
-        path: 'auth',
-        element: <AuthPage />,
-        children: [
-            {
-                path: ':authId',
-                element: <ForgotPass />,
-            }
-        ]
-    }
+export const authRoutes = [
+  {
+    path: 'auth',
+    element: <AuthPage />,
+  },
+  {
+    path: 'forgotPa',
+    element: <ForgotPass />,
+  }
 ]

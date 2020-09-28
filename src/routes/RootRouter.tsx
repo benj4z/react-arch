@@ -1,11 +1,13 @@
 import * as React from 'react';
 import { Navigate } from 'react-router-dom';
-import {router as AuthRouter} from '../features/auth/routes';
+import { authRoutes } from '../features/auth/routes';
+import { welcomeRoutes } from "../features/welcome/routes";
 
 export const router = [
-    ...AuthRouter,
+  ...authRoutes,
+  ...welcomeRoutes,
     {
         path: '/',
-        element: <Navigate to="/auth" />
+        element: <Navigate to="/welcome" />
     }
 ]
