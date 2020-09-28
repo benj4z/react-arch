@@ -1,13 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {AppThunk} from "../index";
 import {fetchUser} from "../../services/api/auth";
-
-export type User = {
-  id: string;
-  firstName: string;
-  lastName: string;
-  isAttendee: boolean;
-}
+import User from "../../features/user/models/User";
 
 type authState = {
   loading: boolean;
