@@ -1,4 +1,4 @@
-import User from "../../features/user/models/User";
+import User from "../../models/User";
 import UserDto from "../dtos/userDto";
 
 /**
