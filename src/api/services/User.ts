@@ -8,4 +8,3 @@ export const fetchUser = async (userId: string) => {
     console.error(error)
   }
 }
-
