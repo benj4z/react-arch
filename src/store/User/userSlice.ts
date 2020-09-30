@@ -1,21 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import User from '../../models/User';
 
-type userState = {
-  loading: boolean;
-  user: User | undefined;
-  error: string | null;
-}
-
-const initialState: userState = {
-  loading: false,
-  user: undefined,
-  error: null,
-};
+import { state } from './state';
 
 const userSlice = createSlice({
   name: 'auth',
-  initialState,
+  initialState: state,
   reducers: {
     getUserStart(state) {
       state.loading = true;

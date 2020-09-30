@@ -1,5 +1,5 @@
 import { AppThunk } from "../index";
-import { fetchUser } from "../../services/api/user";
+import { fetchUser } from "../../api/services/User";
 import { getUserFailed, getUserStart, getUserSuccess } from "./userSlice";
 
 export const getUser = (userId: string): AppThunk => async dispatch => {

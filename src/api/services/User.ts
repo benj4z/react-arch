@@ -1,5 +1,5 @@
 import { http } from "../index";
-import User from "../../../models/User";
+import User from "../../models/User";
 
 export const fetchUser = async (userId: string) => {
   try {
